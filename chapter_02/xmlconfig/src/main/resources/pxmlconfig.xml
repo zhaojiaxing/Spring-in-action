@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="peppers" class="com.zjx.xml.properties.BlankDisc">
+            <constructor-arg value="十一月的萧邦"></constructor-arg>
+            <constructor-arg value="周杰伦"></constructor-arg>
+            <constructor-arg >
+                <list>
+                    <value>发如雪</value>
+                    <value>夜曲</value>
+                    <value>黑色毛衣</value>
+                </list>
+            </constructor-arg>
+    </bean>
+
+    <bean class="com.zjx.xml.CDPlayer">
+        <constructor-arg ref="peppers"></constructor-arg>
+    </bean>
+</beans>

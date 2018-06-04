@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="compactDisc" class="com.zjx.xml.properties.BlankDisc">
+        <property name="title" value="十一月的萧邦"></property>
+        <property name="artist" value="周杰伦"></property>
+        <property name="tracks">
+            <list>
+                <value>发如雪</value>
+                <value>夜曲</value>
+                <value>黑色毛衣</value>
+            </list>
+        </property>
+    </bean>
+</beans>
