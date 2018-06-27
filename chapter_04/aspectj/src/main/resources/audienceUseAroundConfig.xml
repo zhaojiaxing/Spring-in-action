@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://www.springframework.org/schema/aop/spring-aop.xsd http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean id="audience" class="com.zjx.aspectj.AudienceUseAroundXml"></bean>
+    <aop:config>
+        <!--引用audience bean -->
+        <aop:aspect ref="audience">
+
+            <!-- 定义通用切点 -->
+            <aop:pointcut id="performance" expression="execution(* com.zjx.aspectj.Performance.perform(..))"/>
+
+            <!-- 定义前置通知，表演之前手机静音-->
+            <aop:around pointcut-ref="performance"  method="watchPerformance"/>
+
+        </aop:aspect>
+
+    </aop:config>
+</beans>

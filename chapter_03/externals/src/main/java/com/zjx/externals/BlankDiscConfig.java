@@ -4,13 +4,12 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.context.annotation.PropertySource;
 
 /**
  * Created by zjx on 2018/6/7.
  */
 @Configuration
-@PropertySource("classpath:disc.properties") //声明属性源
+//@PropertySource("classpath:disc.properties") //声明属性源
 public class BlankDiscConfig {
 
     @Bean
